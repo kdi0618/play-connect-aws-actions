@@ -4,6 +4,9 @@ name: CI
 on:
   push:
     branches: [ main ]
+  repository_dispatch:
+    branches: [ main ]
+    types: [ update_post ]
 
 # ジョブの設定（直列に動かしたり並行に動かしたり指定できる）
 # 今回はbuildジョブとdeployジョブの2つを設定します
